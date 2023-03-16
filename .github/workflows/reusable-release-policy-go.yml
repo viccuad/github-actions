@@ -33,7 +33,7 @@ jobs:
       -
         name: Check that artifacthub-pkg.yml is up-to-date
         if: ${{ inputs.artifacthub }}
-        uses: kubewarden/github-actions/check-artifacthub@v2
+        uses: viccuad/github-actions/check-artifacthub@v3
         with:
           version: ${{ steps.calculate-version.outputs.version }}
       -
