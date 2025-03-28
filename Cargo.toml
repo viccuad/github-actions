@@ -1,0 +1,29 @@
+[package]
+name = "verify-image-signatures"
+version = "0.1.0-changeme"
+authors = ["Kubewarden Developers <kubewarden@suse.de>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+anyhow = "1.0"
+k8s-openapi = { version = "0.24.0", default-features = false, features = [
+  "v1_32",
+] }
+kubewarden-policy-sdk = "0.13.0"
+lazy_static = "1.4"
+pem = "3.0.4"
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+slog = "2.7"
+validator = { version = "0.20", features = ["derive"] }
+wildmatch = "2.3.3"
+
+[dev-dependencies]
+mockall = "0.13"
+rstest = "0.25.0"
+serial_test = "3.1.1"
