@@ -1,5 +1,6 @@
 name: "kubewarden-policy-release"
 description: "Release a Kubewarden policy"
+# Requires 'packages: write' permission for GITHUB_TOKEN
 branding:
   icon: "package"
   color: "blue"

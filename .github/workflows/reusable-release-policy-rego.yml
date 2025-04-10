@@ -26,6 +26,10 @@ on:
 
 jobs:
   release:
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to push the OCI artifact
+      # to ghcr.io
+      packages: write
     runs-on: ubuntu-latest
     steps:
       - name: Install dependencies
