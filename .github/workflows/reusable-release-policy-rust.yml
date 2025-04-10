@@ -59,7 +59,7 @@ jobs:
         run: |
           make e2e-tests
       - name: Release
-        uses: kubewarden/github-actions/policy-release@v4.5.0-rc1
+        uses: viccuad/github-actions/policy-release@v4.5.0-rc2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           oci-target: ${{ inputs.oci-target }}
