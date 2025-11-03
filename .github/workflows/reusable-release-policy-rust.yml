@@ -50,12 +50,12 @@ jobs:
         with:
           expected-version: ${{ steps.calculate-version.outputs.version }}
       - name: Build and annotate policy
-        uses: kubewarden/github-actions/policy-build-rust@v4.5.13
+        uses: viccuad/github-actions/policy-build-rust@main
       - name: Run e2e tests
         run: |
           make e2e-tests
       - name: Release
-        uses: kubewarden/github-actions/policy-release@v4.5.13
+        uses: viccuad/github-actions/policy-release@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           oci-target: ${{ inputs.oci-target }}
